@@ -1,11 +1,12 @@
-type User = {
+type Prompt = {
   id: number
   name: string
-  email: string
+  system_message: string
+  message: string
 }
 
-export async function fetchUsers(): Promise<User[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/users`)
+export async function fetchPrompts(): Promise<Prompt[]> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/prompts`)
   const data = await res.json()
   return data
 }

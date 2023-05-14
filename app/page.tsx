@@ -1,10 +1,10 @@
-import Users from '../components/Users'
+import Prompts from '@/components/Prompts'
 
 export default function Home() {
   return (
     <main className="mx-auto">
       <div>
-        <Users />
+        <Prompts />
       </div>
     </main>
   )
